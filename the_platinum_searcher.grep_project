@@ -1,0 +1,7 @@
+pt
+--nocolor
+--nogroup
+--numbers
+--word-regexp
+$*
+$/

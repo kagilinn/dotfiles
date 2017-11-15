@@ -1,0 +1,7 @@
+fgrep
+-HInrw
+--color=never
+--exclude-dir={.git,.svn,.hg}
+-e
+$*
+$/
