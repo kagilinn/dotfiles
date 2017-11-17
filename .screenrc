@@ -1,0 +1,12 @@
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+escape ^Zz
+startup_message off
+altscreen on
+autodetach on
+hardstatus alwayslastline "[GNU screen] %-w%{= dd}%n %t%{-}%+w %= F2:new F3:prev F4:next F6:detach"
+bindkey -k k2 screen
+bindkey -k k3 prev
+bindkey -k k4 next
+bindkey -k k6 detach
