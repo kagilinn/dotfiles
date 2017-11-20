@@ -1,12 +1,30 @@
 defutf8 on
 defencoding utf8
 encoding utf8 utf8
-escape ^Zz
+escape ^Z^Z
 startup_message off
 altscreen on
 autodetach on
-hardstatus alwayslastline "[GNU screen] %-w%{= dd}%n %t%{-}%+w %= F2:new F3:prev F4:next F6:detach"
+shelltitle "$ |sh"
+caption always "%-w%{= dd}%n %t%{-}%+w"
+hardstatus alwayslastline "screen%=F2:new F3:prev F4:next F6:detach |SHIFT| F2:split F3:up F4:down F5:only"
 bindkey -k k2 screen
 bindkey -k k3 prev
 bindkey -k k4 next
 bindkey -k k6 detach
+
+# -------------------------------------------------------------------------
+# ここから先は端末のキーボード設定が必要かも.
+# ^[ はエスケープ. 端末によって \033 だったり \e だったりする.
+# -------------------------------------------------------------------------
+# Shift + F2 を想定
+bindkey "^[[1;2Q" eval split focus 'resize 9' screen
+
+# Shift + F3 を想定
+bindkey "^[[1;2R" focus up
+
+# Shift + F4 を想定
+bindkey "^[[1;2S" focus down
+
+# Shift + F5 を想定
+bindkey "^[[15;2~" only
