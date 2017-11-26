@@ -5,13 +5,15 @@ escape ^Z^Z
 startup_message off
 altscreen on
 autodetach on
-shelltitle "$ |sh"
+defscrollback 1024
+shelltitle "$ |$SHELL"
 caption always "%-w%{= dd}%n %t%{-}%+w"
-hardstatus alwayslastline "screen%=F2:new F3:prev F4:next F6:detach |SHIFT| F2:split F3:up F4:down F5:only"
+hardstatus alwayslastline "screen%=f2:new f3:<- f4:-> f6:detach f7:copy | F2:split F3:up F4:down F5:only"
 bindkey -k k2 screen
 bindkey -k k3 prev
 bindkey -k k4 next
 bindkey -k k6 detach
+bindkey -k k7 copy
 
 # -------------------------------------------------------------------------
 # ここから先は端末のキーボード設定が必要かも.
