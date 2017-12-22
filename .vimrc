@@ -90,6 +90,8 @@ set hlsearch
 set nowrapscan
 " 単語の上で ctrl+k を押すと外部grep
 nnoremap <C-k> :<C-u>grep '<C-r><C-w>'<CR><CR>
+" Ctrl+] もカーソル位置の単語を外部grep (本来は ctags ジャンプ)
+nnoremap <C-]> :<C-u>grep '<C-r><C-w>'<CR><CR>
 " vimgrep or 外部grep 時に結果を別ペインに表示
 autocmd QuickFixCmdPost *grep* cwindow
 " 別ペインに表示した前後の検索結果を検索するキーバインド
