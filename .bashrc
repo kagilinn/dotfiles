@@ -21,20 +21,28 @@ alias gsta='git stash save'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 
+# ssh-prompt
+PS1="${SSH_CONNECTION}"
+if [[ -n "${SSH_CONNECTION}" || -n "${SSH_CLIENT}" ]]; then
+	PS1='[\u@\h]'
+else
+	PS1=''
+fi
+
 # git-prompt
 if [ -r ~/.git-prompt.sh ]; then
 	source ~/.git-prompt.sh
 else
 	if [ "$(uname)" == 'Darwin' ]; then
 		if [ -r     /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ]; then
-			/bin/cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
+			cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh ~/.git-prompt.sh
 		fi
 	fi
 	if [ -r ~/.git-prompt.sh ]; then
 		source ~/.git-prompt.sh
 	fi
 fi
-PS1='\W$(__git_ps1) \$ '
+PS1=$PS1'\W$(__git_ps1) \$ '
 
 # git-completion
 if [ -r ~/.git-completion.bash ]; then
@@ -42,7 +50,7 @@ if [ -r ~/.git-completion.bash ]; then
 else
 	if [ "$(uname)" == 'Darwin' ]; then
 		if [ -r     /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-			/bin/cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ~/.git-completion.bash
+			cp /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ~/.git-completion.bash
 		fi
 	fi
 	if [ -r ~/.git-completion.bash ]; then
