@@ -1,3 +1,3 @@
 #!/bin/ksh
 . ~/.profile
-fish "$@"
+/usr/local/bin/fish "$@"
