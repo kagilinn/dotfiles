@@ -1,3 +1,5 @@
+set -o emacs
+
 LOAD_LOG="$LOAD_LOG .kshrc"
 export LOAD_LOG
 
