@@ -1,5 +1,7 @@
 scriptencoding utf-8
 
+set shell=ksh
+
 filetype off
 filetype plugin indent off
 

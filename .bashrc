@@ -3,6 +3,11 @@ alias ls='ls -FG'
 alias mv='mv -i'
 alias vim='vim -p'
 
+# 対話からの grep はバイナリ無視, 色付き.
+alias grep='grep -I --color'
+alias fgrep='fgrep -I --color'
+alias egrep='egrep -I --color'
+
 # git 系 alias
 alias ga='git add'
 alias gb='git branch'
