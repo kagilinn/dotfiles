@@ -30,6 +30,7 @@ alias gst='git status'
 alias gsta='git stash save'
 alias gstl='git stash list'
 alias gstp='git stash pop'
+alias gu='git merge origin/`git symbolic-ref --short @`'
 
 # ssh-prompt
 PS1="${SSH_CONNECTION}"
