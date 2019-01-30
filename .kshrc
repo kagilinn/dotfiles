@@ -24,5 +24,5 @@ if [ -n "${SSH_CLIENT}" ]; then
 elif [ -n "${SSH_CONNECTION}" ]; then
 	PS1="${USER}@"`hostname`"$ "
 else
-	PS1="${PWD##*/}$ "
+	PS1="\${PWD##*/}$ "
 fi
