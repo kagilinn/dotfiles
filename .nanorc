@@ -1,4 +1,13 @@
-set nowrap
 set autoindent
-set tabsize 4
+unset backup
+unset backwards
+set casesensitive
 set morespace
+unset nofollow
+unset nohelp
+unset nonewlines
+set noconvert
+set nowrap
+unset regexp
+set tabsize 4
+unset tabstospaces
