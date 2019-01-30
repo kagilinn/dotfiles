@@ -1,5 +1,8 @@
 alias hd='hexdump -C'
 alias ls='ls -FG'
+alias ll='ls -lFG'
+alias la='ls -aFG'
+alias lla='ls -alFG'
 alias mv='mv -i'
 alias vim='vim -p'
 

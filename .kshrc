@@ -4,6 +4,9 @@ LOAD_LOG="$LOAD_LOG .kshrc"
 export LOAD_LOG
 
 alias ls='ls -FG'
+alias la='ls -aFG'
+alias ll='ls -lFG'
+alias lla='ls -alFG'
 alias mv='mv -i'
 alias vim='vim -p'
 alias ga='git add'
