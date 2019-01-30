@@ -6,6 +6,7 @@ alias lla='ls -alFG'
 alias mv='mv -i'
 alias cp='cp -i'
 alias vim='vim -p'
+alias view='view -p'
 
 # 対話からの grep はバイナリ無視, 色付き.
 alias grep='grep -I --color'
