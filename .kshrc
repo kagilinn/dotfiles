@@ -6,6 +6,13 @@ export LOAD_LOG
 alias ls='ls -FG'
 alias mv='mv -i'
 alias vim='vim -p'
+alias ga='git add'
+alias gd='git diff'
+alias gdca='git diff --cached'
+alias gst='git status'
+alias gsta='git stash save'
+alias gstl='git stash list'
+alias gstp='git stash pop'
 
 if [ -n "${SSH_CLIENT}" ]; then
 	PS1="${USER}@"`hostname`"$ "
