@@ -77,3 +77,5 @@ fi
 if [ $TERM == 'screen' ]; then
 	PS1='\[\ek\e\\\]'$PS1
 fi
+
+[ -r ~/.bashrc_local ] && source ~/.bashrc_local
