@@ -22,9 +22,9 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 
 if [ -n "${SSH_CLIENT}" ]; then
-	PS1="${USER}@"`hostname`"$ "
+	PS1="[${USER}@`hostname` \${PWD##*/}]$ "
 elif [ -n "${SSH_CONNECTION}" ]; then
-	PS1="${USER}@"`hostname`"$ "
+	PS1="[${USER}@`hostname` \${PWD##*/}]$ "
 else
 	PS1="\${PWD##*/}$ "
 fi
