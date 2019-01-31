@@ -5,14 +5,6 @@ set shell=ksh
 filetype off
 filetype plugin indent off
 
-" NeoBundleの初期化
-if has('vim_starting')
-	set runtimepath+=~/.vim/bundle/neobundle.vim
-endif
-call neobundle#begin(expand('~/.vim/bundle/'))
-	NeoBundleFetch 'Shougo/neobundle'
-call neobundle#end()
-
 "---------------------------------------------------------------------
 " グローバルな設定
 "---------------------------------------------------------------------
@@ -121,15 +113,55 @@ let g:netrw_list_hide='^\.\.\/$,^[^.]'
 "--------------------------------------------------------------------------
 " .m は Objective-C と認識させる
 let g:filetype_m = 'objc'
+
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=$HOME/.vim/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+if dein#load_state($HOME . '/.vim/dein')
+  call dein#begin($HOME . '/.vim/dein')
+
+  " Let dein manage dein
+  " Required:
+  call dein#add($HOME . '/.vim/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here like this:
+  "call dein#add('Shougo/neosnippet.vim')
+  "call dein#add('Shougo/neosnippet-snippets')
+
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+    call dein#add('roxma/nvim-yarp')
+    call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  let g:deoplete#enable_at_startup = 1
+  call g:deoplete#custom#option('auto_complete', 1)
+  call g:deoplete#custom#option('auto_complete_delay', 500)
+  call g:deoplete#custom#option('yarp', 1)
+
+  call dein#load_toml($HOME . '/.vim/dein.toml')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
+
+"End dein Scripts-------------------------
+
 " 色分け
 syntax on
 " 読み込み開始
 filetype plugin indent on
-
-"--------------------------------------------------------------------------
-" NeoBundleのチェックを開始する
-"--------------------------------------------------------------------------
-NeoBundleCheck
 
 if filereadable(expand('~/.vimrc_grep.vim'))
 	source ~/.vimrc_grep.vim
@@ -137,3 +169,4 @@ endif
 if filereadable(expand('~/.vimrc_local.vim'))
 	source ~/.vimrc_local.vim
 endif
+
