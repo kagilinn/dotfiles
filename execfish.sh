@@ -1,3 +1,4 @@
 #!/bin/ksh
 . ~/.profile
-/usr/local/bin/fish "$@"
+FISH_PATH_TMP=$PATH /usr/local/bin/fish \
+    --init-command='set PATH $FISH_PATH_TMP' "$@"
