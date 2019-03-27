@@ -1,4 +1,5 @@
 alias hd='hexdump -C'
+alias irb='irb -I.'
 alias ls='ls -FG'
 alias ll='ls -lFG'
 alias la='ls -aFG'
