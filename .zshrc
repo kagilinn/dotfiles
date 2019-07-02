@@ -1,11 +1,16 @@
 bindkey -e
+
 setopt always_last_prompt
 setopt autocd
 setopt correct
 setopt markdirs
 setopt nobeep
 setopt prompt_subst
+
 alias cp='cp -i'
+alias egrep='egrep -I --color'
+alias fgrep='fgrep -I --color'
+alias grep='grep -I --color'
 alias la='ls -aG'
 alias ll='ls -lG'
 alias lla='ls -alG'
@@ -13,7 +18,9 @@ alias ls='ls -G'
 alias mv='mv -i'
 alias rm='rm -i'
 alias tac='sed "1!G; \$!h; \$!d"'
+alias view='view -p'
 alias vim='vim -p'
+
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit --verbose'
@@ -24,6 +31,7 @@ alias gdft='git difftool'
 alias gf='git fetch'
 alias glog='git log --oneline --decorate --graph'
 alias gloga='git log --oneline --decorate --graph --all'
+alias gmt='git mergetool'
 alias gpsup='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 alias grh='git reset HEAD'
 alias gst='git status'
