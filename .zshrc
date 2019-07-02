@@ -5,8 +5,6 @@ setopt correct
 setopt markdirs
 setopt nobeep
 setopt prompt_subst
-autoload -Uz compinit && compinit
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 alias cp='cp -i'
 alias ga='git add'
 alias gb='git branch'
@@ -33,6 +31,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 alias tac='sed "1!G; \$!h; \$!d"'
 alias vim='vim -p'
+fpath=(~/.zsh $fpath)
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 export GIT_PS1_SHOWUPSTREAM='auto'
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWSTASHSTATE=1
