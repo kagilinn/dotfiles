@@ -35,9 +35,9 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 export GIT_PS1_SHOWUPSTREAM='auto'
-export GIT_PS1_SHOWUNTRACKEDFILES=1
-export GIT_PS1_SHOWSTASHSTATE=1
-export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_DESCRIBE_STYLE='branch'
 [ -r ~/.git-prompt.sh ] && source ~/.git-prompt.sh
 export PS1='[*]unstaged [+]uncommited [$]stashed [%%]untracked
