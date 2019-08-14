@@ -24,7 +24,7 @@ else
 		source ~/.git-prompt.sh
 	fi
 fi
-PS1=$PS1'\W$(__git_ps1) \$ '
+PROMPT_COMMAND="__git_ps1 '$PS1\W' ' \$ '"
 
 # git-completion
 if [ -r ~/.git-completion.bash ]; then
