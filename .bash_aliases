@@ -1,0 +1,12 @@
+alias cp='cp -i'
+alias egrep='egrep -I --color'
+alias fgrep='fgrep -I --color'
+alias grep='grep -I --color'
+alias la="ls -a $LS_COLOR_OPTION_FLAG"
+alias ll="ls -l $LS_COLOR_OPTION_FLAG"
+alias lla="ls -al $LS_COLOR_OPTION_FLAG"
+alias ls="ls $LS_COLOR_OPTION_FLAG"
+alias mv='mv -i'
+alias rm='rm -i'
+alias view='view -p'
+alias vim='vim -p'
