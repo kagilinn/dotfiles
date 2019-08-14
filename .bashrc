@@ -1,37 +1,7 @@
+[ -r .bash_aliases ] && source .bash_aliases
+
 alias hd='hexdump -C'
 alias irb='irb -I.'
-alias ls='ls -FG'
-alias ll='ls -lFG'
-alias la='ls -aFG'
-alias lla='ls -alFG'
-alias mv='mv -i'
-alias cp='cp -i'
-alias vim='vim -p'
-alias view='view -p'
-
-# 対話からの grep はバイナリ無視, 色付き.
-alias grep='grep -I --color'
-alias fgrep='fgrep -I --color'
-alias egrep='egrep -I --color'
-
-# git 系 alias
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit -v'
-alias gco='git checkout'
-alias gd='git diff'
-alias gdca='git diff --cached'
-alias gdft='git difftool'
-alias gf='git fetch'
-alias glog='git log --oneline --decorate --graph'
-alias gmt='git mergetool'
-alias gpsup='git push --set-upstream origin `git symbolic-ref --short HEAD`'
-alias grh='git reset HEAD'
-alias gst='git status'
-alias gsta='git stash save'
-alias gstl='git stash list'
-alias gstp='git stash pop'
-alias gu='git merge origin/`git symbolic-ref --short @`'
 
 # ssh-prompt
 PS1="${SSH_CONNECTION}"
