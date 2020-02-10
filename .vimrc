@@ -114,49 +114,15 @@ let g:netrw_list_hide='^\.\.\/$,^[^.]'
 " .m は Objective-C と認識させる
 let g:filetype_m = 'objc'
 
-"dein Scripts-----------------------------
-if &compatible
-  set nocompatible               " Be iMproved
-endif
+"--------------------------------------------------------------------------
+" プラグイン管理
+"--------------------------------------------------------------------------
 
-" Required:
-set runtimepath+=$HOME/.vim/dein/repos/github.com/Shougo/dein.vim
-
-" Required:
-if dein#load_state($HOME . '/.vim/dein')
-  call dein#begin($HOME . '/.vim/dein')
-
-  " Let dein manage dein
-  " Required:
-  call dein#add($HOME . '/.vim/dein/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here like this:
-  "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
-
-  call dein#add('Shougo/deoplete.nvim')
-  if !has('nvim')
-    call dein#add('roxma/nvim-yarp')
-    call dein#add('roxma/vim-hug-neovim-rpc')
-  endif
-  let g:deoplete#enable_at_startup = 1
-  call g:deoplete#custom#option('auto_complete', 1)
-  call g:deoplete#custom#option('auto_complete_delay', 500)
-  call g:deoplete#custom#option('yarp', 1)
-
-  call dein#load_toml($HOME . '/.vim/dein.toml')
-
-  " Required:
-  call dein#end()
-  call dein#save_state()
-endif
-
-" If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
-
-"End dein Scripts-------------------------
+call plug#begin('~/.vim/plugged')
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+"Plug 'mattn/vim-lsp-settings'
+call plug#end()
 
 " 色分け
 syntax on
