@@ -21,6 +21,7 @@ alias gst='git status'
 alias gsta='git stash save'
 alias gstl='git stash list'
 alias gstp='git stash pop'
+alias gu='git merge origin/`git symbolic-ref --short HEAD`'
 
 if [ -n "${SSH_CLIENT}" ]; then
 	PS1="[${USER}@`hostname` \${PWD##*/}]$ "
