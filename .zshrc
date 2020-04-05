@@ -1,4 +1,5 @@
 bindkey -e
+bindkey '[3~' delete-char
 
 setopt always_last_prompt
 setopt autocd
