@@ -11,6 +11,10 @@ HUDSON_HOME=$HOME/.jenkins
 export HUDSON_HOME
 
 # Ruby (RubyGems)
+for p in `ls -1d /usr/local/lib/ruby/gems/*/bin`
+do
+	PATH=$p:$PATH
+done
 PATH=/usr/local/opt/ruby/bin:$PATH
 
 # Imagemagick
