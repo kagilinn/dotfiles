@@ -121,8 +121,10 @@ let g:filetype_m = 'objc'
 call plug#begin('~/.vim/plugged')
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-"Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-lsp-settings'
 call plug#end()
+
+set omnifunc=lsp#complete
 
 " 色分け
 syntax on
