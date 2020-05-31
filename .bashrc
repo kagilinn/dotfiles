@@ -1,4 +1,4 @@
-[ -r .bash_aliases ] && source .bash_aliases
+[ -r ~/.bash_aliases ] && source ~/.bash_aliases
 
 alias hd='hexdump -C'
 alias irb='irb -I.'

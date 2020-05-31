@@ -1,8 +1,8 @@
 alias cp='cp -i'
-alias la="ls -a $LS_COLOR_OPTION_FLAG"
-alias ll="ls -l $LS_COLOR_OPTION_FLAG"
-alias lla="ls -al $LS_COLOR_OPTION_FLAG"
-alias ls="ls $LS_COLOR_OPTION_FLAG"
+alias la='ls -a $LS_COLOR_OPTION_FLAG'
+alias ll='ls -l $LS_COLOR_OPTION_FLAG'
+alias lla='ls -al $LS_COLOR_OPTION_FLAG'
+alias ls='ls $LS_COLOR_OPTION_FLAG'
 alias mv='mv -i'
 alias rm='rm -i'
 alias view='view -p'
