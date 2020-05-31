@@ -3,14 +3,6 @@
 alias hd='hexdump -C'
 alias irb='irb -I.'
 
-# ssh-prompt
-PS1="${SSH_CONNECTION}"
-if [[ -n "${SSH_CONNECTION}" || -n "${SSH_CLIENT}" ]]; then
-	PS1='[\u@\h]'
-else
-	PS1=''
-fi
-
 # git-prompt
 if [ -r ~/.git-prompt.sh ]; then
 	source ~/.git-prompt.sh
@@ -24,7 +16,18 @@ else
 		source ~/.git-prompt.sh
 	fi
 fi
-PROMPT_COMMAND="__git_ps1 '$PS1\W' ' \$ '"
+PS1=''
+AUTO_LS_AFTER_CD_DIR="${PWD}"
+prompt_command_function () {
+	[[ $AUTO_LS_AFTER_CD_DIR != $PWD ]] && ls
+	AUTO_LS_AFTER_CD_DIR="${PWD}"
+	if [[ -n "${SSH_CONNECTION}" || -n "${SSH_CLIENT}" ]]; then
+		__git_ps1 '[\u@\h]\W' ' \$ '
+	else
+		__git_ps1 '\W' ' \$ '
+	fi
+}
+PROMPT_COMMAND='prompt_command_function'
 
 # git-completion
 if [ -r ~/.git-completion.bash ]; then
