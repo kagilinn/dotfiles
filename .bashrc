@@ -22,7 +22,7 @@ prompt_command_function () {
 	[[ $AUTO_LS_AFTER_CD_DIR != $PWD ]] && ls
 	AUTO_LS_AFTER_CD_DIR="${PWD}"
 	if [[ -n "${SSH_CONNECTION}" || -n "${SSH_CLIENT}" ]]; then
-		__git_ps1 '[\u@\h]\W' ' \$ '
+		__git_ps1 '[\u@\h]\W' '\$ '
 	else
 		__git_ps1 '\W' ' \$ '
 	fi
