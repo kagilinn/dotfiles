@@ -4,6 +4,12 @@ alias hd='hexdump -C'
 alias irb='irb -I.'
 
 # git-prompt
+export GIT_PS1_SHOWUPSTREAM='auto'
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_DESCRIBE_STYLE='branch'
+export GIT_PS1_SHOWCOLORHINTS=true
 if [ -r ~/.git-prompt.sh ]; then
 	source ~/.git-prompt.sh
 else
