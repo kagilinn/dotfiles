@@ -22,9 +22,13 @@ prompt_command_function () {
 	[[ $AUTO_LS_AFTER_CD_DIR != $PWD ]] && ls
 	AUTO_LS_AFTER_CD_DIR="${PWD}"
 	if [[ -n "${SSH_CONNECTION}" || -n "${SSH_CLIENT}" ]]; then
-		__git_ps1 '[\u@\h]\W' '\$ '
+		# CentOS 風?
+#		__git_ps1 '[\u@\h]\W' '\$ '
+
+		# macOS 風.
+		__git_ps1 '\h:\W \u' '\$ '
 	else
-		__git_ps1 '\W' ' \$ '
+		__git_ps1 '\W' '\$ '
 	fi
 }
 PROMPT_COMMAND='prompt_command_function'
