@@ -20,6 +20,9 @@ PATH=/usr/local/opt/ruby/bin:$PATH
 # Imagemagick
 PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
+PATH="/usr/local/opt/openjdk/bin:$PATH"
+PATH="/usr/local/opt/openssl/bin:$PATH"
+
 PKG_CONFIG_PATH=/usr/local/opt/imagemagick@6/lib/pkgconfig
 export PKG_CONFIG_PATH
 
