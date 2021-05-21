@@ -4,14 +4,15 @@ LOAD_LOG="$LOAD_LOG .kshrc"
 export LOAD_LOG
 
 alias irb='irb -I.'
-alias ls='ls -FG'
-alias la='ls -aFG'
-alias ll='ls -lFG'
-alias lla='ls -alFG'
+alias ls='ls $LS_COLOR_OPTION_FLAG'
+alias la='ls -a $LS_COLOR_OPTION_FLAG'
+alias ll='ls -l $LS_COLOR_OPTION_FLAG'
+alias lla='ls -al $LS_COLOR_OPTION_FLAG'
 alias mv='mv -i'
 alias cp='cp -i'
 alias vim='vim -p'
 alias view='view -p'
+
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit --verbose'
