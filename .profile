@@ -1,3 +1,6 @@
+LOAD_LOG="$LOAD_LOG .profile"
+export LOAD_LOG
+
 EDITOR=vim
 export EDITOR
 
