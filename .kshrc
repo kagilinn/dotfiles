@@ -10,6 +10,7 @@ alias ll='ls -l $LS_COLOR_OPTION_FLAG'
 alias lla='ls -al $LS_COLOR_OPTION_FLAG'
 alias mv='mv -i'
 alias cp='cp -i'
+alias ghc='stack ghc --'
 alias vim='vim -p'
 alias view='view -p'
 

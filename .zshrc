@@ -9,6 +9,7 @@ setopt nobeep
 setopt prompt_subst
 
 alias cp='cp -i'
+alias ghc='stack ghc --'
 alias egrep='egrep -I --color'
 alias fgrep='fgrep -I --color'
 alias grep='grep -I --color'

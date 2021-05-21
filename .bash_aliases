@@ -1,4 +1,5 @@
 alias cp='cp -i'
+alias ghc='stack ghc --'
 alias la='ls -a $LS_COLOR_OPTION_FLAG'
 alias ll='ls -l $LS_COLOR_OPTION_FLAG'
 alias lla='ls -al $LS_COLOR_OPTION_FLAG'
