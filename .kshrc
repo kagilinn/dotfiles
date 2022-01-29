@@ -14,6 +14,11 @@ alias ghc='stack ghc --'
 alias vim='vim -p'
 alias view='view -p'
 
+# RCS の分かりやすさ優先コマンド.
+alias rcscheckout='co -l'
+alias rcscommit='ci -l'
+alias rcsinit='mkdir -v RCS'
+
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit --verbose'

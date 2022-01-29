@@ -14,6 +14,11 @@ alias egrep='egrep -I --color'
 alias fgrep='fgrep -I --color'
 alias grep='grep -I --color'
 
+# RCS の分かりやすさ優先コマンド.
+alias rcscheckout='co -l'
+alias rcscommit='ci -l'
+alias rcsinit='mkdir -v RCS'
+
 # git 系 alias
 alias ga='git add'
 alias gb='git branch'
