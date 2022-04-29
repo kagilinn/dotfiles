@@ -23,6 +23,9 @@ PATH=/usr/local/opt/ruby/bin:$PATH
 # Imagemagick
 PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
 
+# SQLite
+PATH="/usr/local/opt/sqlite/bin:$PATH"
+
 PATH="/usr/local/opt/openjdk/bin:$PATH"
 PATH="/usr/local/opt/openssl/bin:$PATH"
 
