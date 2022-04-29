@@ -119,6 +119,7 @@ let g:filetype_m = 'objc'
 "--------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
+Plug 'udalov/kotlin-vim'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
