@@ -1,3 +1,5 @@
+;; -*- tab-width: 8; indent-tabs-mode: t -*-
+
 ;; <leaf-install-code>
 (eval-and-compile
   (customize-set-variable
@@ -22,6 +24,8 @@
   :custom ((imenu-list-size . 30)
 	   (imenu-list-position . 'left)))
 
+(leaf leaf-convert :ensure t)
+
 (leaf leaf-manager :ensure t)
 
 (leaf eglot
@@ -37,15 +41,18 @@
 	 ( perl-mode-hook . company-mode)
 	 (cperl-mode-hook . company-mode)))
 
-;; (setq-default indent-tabs-mode nil)
 (leaf cus-start
   :setq-default `((tab-width        . 4)
                   (indent-tabs-mode . nil))
+  :custom `((indent-tabs-mode . nil))
   :config
   (when window-system
     (set-frame-size (selected-frame) 165 37))
-  (global-auto-revert-mode t)
   (global-display-line-numbers-mode t))
+
+(leaf autorevert
+  :custom ((auto-revert-interval . 0.5))
+  :global-minor-mode global-auto-revert-mode)
 
 (leaf recentf
   :pre-setq `((byte-compile-warnings . '(cl-functions)))
@@ -59,3 +66,5 @@
   :config
   (global-set-key (kbd "C-x C-g") 'recentf-open-files)
   (recentf-mode 1))
+
+;; vim: set tabstop=8 shiftwidth=2 noexpandtab :
