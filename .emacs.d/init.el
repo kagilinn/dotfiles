@@ -1,4 +1,5 @@
 ;; -*- tab-width: 8; indent-tabs-mode: t -*-
+;; vim: set tabstop=8 shiftwidth=2 noexpandtab :
 
 ;; <leaf-install-code>
 (eval-and-compile
@@ -66,5 +67,3 @@
   :config
   (global-set-key (kbd "C-x C-g") 'recentf-open-files)
   (recentf-mode 1))
-
-;; vim: set tabstop=8 shiftwidth=2 noexpandtab :
