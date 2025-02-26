@@ -1,4 +1,4 @@
-;; -*- tab-width: 8; indent-tabs-mode: t -*-
+;; -*- tab-width: 8; indent-tabs-mode: t; lexical-binding: t -*-
 ;; vim: set tabstop=8 shiftwidth=2 noexpandtab :
 
 ;; <leaf-install-code>
