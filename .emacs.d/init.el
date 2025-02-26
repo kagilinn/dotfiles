@@ -48,7 +48,8 @@
 (leaf cus-start
   :setq-default `((tab-width        . 4)
                   (indent-tabs-mode . nil))
-  :custom `((indent-tabs-mode . nil))
+  ;; :custom `((VARIABLE-NAME . VALUE)
+  ;;           (VARIABLE-NAME . VALUE))
   :config
   (when window-system
     (set-frame-size (selected-frame) 165 37))
